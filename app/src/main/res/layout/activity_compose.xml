@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ComposeActivity">
 
-    <EditText
+   <!-- <EditText
         android:id="@+id/etCompose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/compose_text_input_layout"
+        android:layout_width="match_parent"
+        app:counterEnabled="true"
+        app:counterMaxLength="240"
+        app:counterTextAppearance="@style/counterText"
+        app:counterOverflowTextAppearance="@style/counterOverride"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/etCompose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:gravity="start|top"
+            android:minLines="5"
+            android:layout_margin="10dp"
+            android:inputType="textMultiLine"
+            android:hint="What's Happening?" />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btnTweet"
         android:layout_width="wrap_content"
@@ -27,5 +54,5 @@
         android:text="Tweet"
         android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCompose" />
+        app:layout_constraintTop_toBottomOf="@+id/compose_text_input_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
