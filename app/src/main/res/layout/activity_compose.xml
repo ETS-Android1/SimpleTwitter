@@ -24,7 +24,7 @@
         android:id="@+id/compose_text_input_layout"
         android:layout_width="match_parent"
         app:counterEnabled="true"
-        app:counterMaxLength="240"
+        app:counterMaxLength="280"
         app:counterTextAppearance="@style/counterText"
         app:counterOverflowTextAppearance="@style/counterOverride"
         android:layout_margin="10dp"
